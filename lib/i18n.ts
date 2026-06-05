@@ -1,0 +1,62 @@
+export type Language = 'es' | 'en' | 'fr'
+
+export const translations = {
+  es: {
+    home: 'Inicio',
+    about: 'Sobre mí',
+    archive: 'Archivo',
+    readMore: 'Leer más',
+    minRead: 'min de lectura',
+    featuredPost: 'Destacado',
+    recentPosts: 'Publicaciones recientes',
+    allPosts: 'Todas las publicaciones',
+    filterByLanguage: 'Filtrar por idioma',
+    filterByCategory: 'Filtrar por categoría',
+    all: 'Todo',
+    tagline: 'Reflexiones diarias sobre filosofía, literatura y vida',
+    footerTagline: 'Pensamientos que perduran',
+    copyright: '© 2024. Todos los derechos reservados.',
+    aboutTitle: 'Sobre mí',
+    aboutIntro: 'Bienvenido a mi rincón de pensamientos.',
+  },
+  en: {
+    home: 'Home',
+    about: 'About',
+    archive: 'Archive',
+    readMore: 'Read more',
+    minRead: 'min read',
+    featuredPost: 'Featured',
+    recentPosts: 'Recent posts',
+    allPosts: 'All posts',
+    filterByLanguage: 'Filter by language',
+    filterByCategory: 'Filter by category',
+    all: 'All',
+    tagline: 'Daily reflections on philosophy, literature, and life',
+    footerTagline: 'Thoughts that endure',
+    copyright: '© 2024. All rights reserved.',
+    aboutTitle: 'About',
+    aboutIntro: 'Welcome to my corner of thoughts.',
+  },
+  fr: {
+    home: 'Accueil',
+    about: 'À propos',
+    archive: 'Archives',
+    readMore: 'Lire la suite',
+    minRead: 'min de lecture',
+    featuredPost: 'À la une',
+    recentPosts: 'Publications récentes',
+    allPosts: 'Toutes les publications',
+    filterByLanguage: 'Filtrer par langue',
+    filterByCategory: 'Filtrer par catégorie',
+    all: 'Tout',
+    tagline: 'Réflexions quotidiennes sur la philosophie, la littérature et la vie',
+    footerTagline: 'Des pensées qui perdurent',
+    copyright: '© 2024. Tous droits réservés.',
+    aboutTitle: 'À propos',
+    aboutIntro: 'Bienvenue dans mon coin de pensées.',
+  },
+}
+
+export function getTranslation(lang: Language, key: keyof typeof translations.en) {
+  return translations[lang][key]
+}
